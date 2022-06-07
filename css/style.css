@@ -180,4 +180,74 @@ hr {
     border: 2px solid #303050;
     border-radius: 2px;
     box-shadow: 0px 3px 4px black;
+    padding: 6px;
+}
+
+.worm-block {
+    margin: auto;
+    width: calc(100% - 120px);
+    display: grid;
+    grid-template-columns: calc(50% - 140px) 280px calc(50% - 140px);
+}
+
+.worm-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1 / span 1;
+    position: relative;
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 2px solid black;
+    border-right: none;
+    margin: 3px 0px;
+    padding: 5px;
+    text-align: center;
+}
+
+.worm-left::before {
+    content: "«";
+    padding-right: 3px;
+}
+
+.worm-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2 / span 1;
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 2px solid black;
+    padding: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.worm-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 3 / span 1;
+    position: relative;
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 2px solid black;
+    border-left: none;
+    margin: 3px 0px;
+    padding: 5px;
+    text-align: center;
+}
+
+
+.worm-right::after {
+    content: "»";
+    padding-left: 3px;
+}
+
+
+.footnoteblock::before {
+    display: block;
+    font-size: 1.25em;
+    font-weight: bold;
+    content: 'Footnotes';
 }
